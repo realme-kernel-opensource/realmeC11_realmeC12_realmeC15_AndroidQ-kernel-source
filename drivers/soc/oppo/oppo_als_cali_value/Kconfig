@@ -1,0 +1,6 @@
+config OPPO_ALS_CALI
+	bool "config oppo als cali"
+	help
+		define this config to compile oppo_als_cali_value.c for device register
+
+

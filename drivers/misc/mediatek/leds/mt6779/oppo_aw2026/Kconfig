@@ -1,0 +1,8 @@
+config AW2026_SLED
+	bool "AW2026 for MediaTek package"
+	default n
+	help
+	  It support AW2026.
+          If this option is set,
+	  it will support
+          AW2026.

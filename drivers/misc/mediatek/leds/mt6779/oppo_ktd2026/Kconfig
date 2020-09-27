@@ -1,0 +1,8 @@
+config OPPO_BACKLIGHT_KTD2026
+	bool "KTD2026 for MediaTek package"
+	default n
+	help
+	  It support KTD2026.
+          If this option is set,
+	  it will support
+          KTD2026.

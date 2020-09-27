@@ -1,0 +1,9 @@
+config MTK_SAR_MODEM_HUB
+	bool "sar_modem_hub for MediaTek package"
+	default n
+	help
+	SAR sensor is a physical device,
+	that detect distance between the body and device.
+	This sensor type is design for modem through scp,
+	receive signal from modem to enable/disable
+	SAR sensor

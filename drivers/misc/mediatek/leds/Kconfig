@@ -1,0 +1,39 @@
+config MTK_LEDS
+	tristate "MediaTek LED Support"
+	depends on LEDS_CLASS
+	---help---
+	  This selects the MediaTek(R) LEDs connected to MediaTek chips.
+	  If you want to use MediaTek(R) LEDs support, say Y or M here.
+	  If unsure, say N.
+	  Mediatek LED module includes backlight, indicate LED, keypad LED, button LED etc.
+
+config LIGHTNESS_MAPPING_VALUE
+	int "Backlight brightness mapping value"
+	default 255
+	---help---
+	  Backlight brightness mapping value, from 0 to 255.
+
+config BACKLIGHT_SUPPORT_LP8557
+	bool "Support backlight lp8557 board"
+	default n
+	---help---
+	  LED driver for LP8557 support.
+	  Set y to support.
+	  Set n to disable.
+	  For pwm external backlight.
+
+config BACKLIGHT_SUPPORT_LM3697
+	bool "LM3697(DW8832) Support"
+	default n
+	---help---
+	  LED driver for lm3697(dw8832) support.
+	  Set y to support.
+	  Set n to disable.
+	  Charge pump driver for external backlight.
+#ifdef VENDOR_EDIT
+#Bin.Li@BSP.Fingerprint.Secure 2019/04/12, Add for led ic ktd2026
+source "drivers/misc/mediatek/leds/mt6779/oppo_ktd2026/Kconfig"
+source "drivers/misc/mediatek/leds/mt6779/oppo_ktd2026b/Kconfig"
+#Bin.Li@BSP.Fingerprint.Secure 2019/04/12, Add for led ic aw2026
+source "drivers/misc/mediatek/leds/mt6779/oppo_aw2026/Kconfig"
+#endif
